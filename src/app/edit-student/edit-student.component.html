@@ -1,0 +1,32 @@
+<div *ngIf="selected_sv" class="detail_sv">
+    <table class="table table-striped">
+        <tr>
+            <td scope="row">id</td>
+            <td><input type="text" [(ngModel)]="selected_sv.id" ></td>
+        </tr>
+        <tr>
+            <td scope="row">UserName</td>
+            <td><input type="text" [(ngModel)]="selected_sv.UserName" ></td>
+        </tr>
+        <tr>
+            <td scope="row">Name</td>
+            <td><input type="text" [(ngModel)]="selected_sv.Name" ></td>
+        </tr>
+        <tr>
+            <td scope="row">Email</td>
+            <td><input type="email" [(ngModel)]="selected_sv.Email" ></td>
+        </tr>
+        <tr>
+            <td scope="row">Password</td>
+            <td><input type="password" [(ngModel)]="selected_sv.Password" ></td>
+        </tr>
+        <tr>
+            <td scope="row">CreatedDate</td>
+            <td><input type="date" [(ngModel)]="selected_sv.CreatedDate" ></td>
+        </tr>
+    </table>
+    <button type="button" (click)="updateStudent()">SUBMIT</button>
+    <button style="margin-left: 50px;" type="button" (click)="goBack()">GO BACK</button>
+</div>
+
+

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 head_title">
+      <h1> {{ title | uppercase}} </h1>
+    </div>
+    <div class="col-md-12 btn_add" style="text-align: center; margin-bottom: 30px!important;">
+      <button type="text" class="btn btn-primary btn_addStudent"> <a routerLink="/student/add_student" routerLinkActive="router-link-active"> THÊM </a> </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- <app-student></app-student> -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

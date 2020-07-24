@@ -1,0 +1,37 @@
+<div style="width: 100%; text-align: center;">
+    <!-- Search form -->
+    <div class="md-form mt-0">
+        <input class="form-control" type="text" placeholder="Enter name" aria-label="Search" #searchBox (keyup) = "searchStudent(searchBox.value)">
+    </div>
+    <table class="table table-bordered table-striped table-hover table_sv">
+        <thead>
+            <tr>
+                <th>Chọn</th>
+                <th>id</th>
+                <th>UserName</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>CreatedDate</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let sv of student" >
+            <td scope="row"> <input type="checkbox" [name]="sv.id" ></td>
+            <td>
+                <a routerLink="/student/student-detail/{{ sv.id }}" routerLinkActive="router-link-active" > {{ sv.id }} </a>
+            </td>
+            <td> {{ sv.UserName }} </td>
+            <td> {{ sv.Name }} </td>
+            <td> {{ sv.Email }} </td>
+            <td> {{ sv.Password }} </td>
+            <td> {{ sv.CreatedDate }} </td>
+            <td><button style="width: 30px; height: 30px;" (click) = "deleteStudent(sv.id)">X</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <app-student-detail [selected_sv] = "selected_sv"></app-student-detail> -->
+</div>
+

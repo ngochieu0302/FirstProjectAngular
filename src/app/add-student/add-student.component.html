@@ -1,0 +1,32 @@
+<div class="add_student">
+    <form action="" method="post">
+        <table class="table table-striped tb_add_student">
+            <tr>
+                <td scope="row">id</td>
+                <td><input #id type="text" placeholder="enter your ID" required></td>
+            </tr>
+            <tr>
+                <td scope="row">UserName</td>
+                <td><input #UserName type="text" placeholder="enter your UserName" required></td>
+            </tr>
+            <tr>
+                <td scope="row">Name</td>
+                <td><input #Name type="text" placeholder="enter your Name" required></td>
+            </tr>
+            <tr>
+                <td scope="row">Email</td>
+                <td><input #Email type="email" placeholder="enter your Email" required></td>
+            </tr>
+            <tr>
+                <td scope="row">Password</td>
+                <td><input #Password type="password" placeholder="enter your Password" required></td>
+            </tr>
+            <tr>
+                <td scope="row">CreatedDate</td>
+                <td><input #CreatedDate type="date" required></td>
+            </tr>
+        </table>
+        <button type="button" (click)="add(id.value, UserName.value, Name.value, Email.value, Password.value, CreatedDate.value)">SUBMIT </button>
+        <button style="margin-left: 50px;" type="button" (click)="goBack()">GO BACK</button>
+    </form>
+</div>
